@@ -1,0 +1,54 @@
+<div class="container">
+  <h1 class="text-center mt-5">Currency Converter</h1>
+  <div class="row d-flex justify-content-center align-items-center">
+    <div class="col-6 border border-2 p-4">
+      <div class="row">
+        <div class="col-12">
+          <div>
+            <label for="value">Enter Amount:</label>
+            <input id="value" type="number" [(ngModel)]="value" class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <div class="row  mt-3">
+        <div class="col-12 d-flex justify-content-evenly">
+          <div>
+            <label for="currencyCode">Select currency:</label>
+            <select id="currencyCode" [(ngModel)]="currencyCode" class="form-control">
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="GBP">GBP</option>
+              <option value="JPY">JPY</option>
+              <option value="AUD">AUD</option>
+            </select>
+          </div>
+          <div>
+            <label for="targetCurrency">Convert to:</label>
+            <select id="targetCurrency" [(ngModel)]="targetCurrency" class="form-control">
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="GBP">GBP</option>
+              <option value="JPY">JPY</option>
+              <option value="AUD">AUD</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-12 d-flex justify-content-center align-items-center ">
+          <button (click)="convert()" class="btn btn-primary">Convert</button>
+        </div>
+      </div>
+
+      
+      <div class="row d-flex justify-content-center align-items-center mt-3">
+        <div class="col-6 d-flex justify-content-center align-items-center border border-2 p-3">
+          <p> <span class="fw-bolder">Converted Amount:</span> {{ convertedValue }}</p>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
